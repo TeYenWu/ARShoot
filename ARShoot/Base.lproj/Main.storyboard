@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARShoot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VDE-5B-bES">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uX4-oO-hmt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKY-mm-Mnn">
+                                <rect key="frame" x="157.5" y="587" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="79M-lM-FLL"/>
+                                    <constraint firstAttribute="width" constant="60" id="TNr-Df-Ex3"/>
+                                </constraints>
+                                <state key="normal" image="camerabutton"/>
+                                <connections>
+                                    <action selector="shoot:" destination="BV1-FR-VrT" eventType="touchUpInside" id="IsN-w6-ZHn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BF6-83-fwg">
+                                <rect key="frame" x="295" y="587" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HXb-pa-VLn"/>
+                                    <constraint firstAttribute="width" constant="60" id="r3z-VM-UKP"/>
+                                </constraints>
+                                <state key="normal" title="Preview"/>
+                                <connections>
+                                    <action selector="preview:" destination="BV1-FR-VrT" eventType="touchUpInside" id="gwt-go-JQ1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uX4-oO-hmt" firstAttribute="top" secondItem="raw-J0-wgc" secondAttribute="top" id="5Zy-No-vHv"/>
+                            <constraint firstItem="raw-J0-wgc" firstAttribute="trailing" secondItem="BF6-83-fwg" secondAttribute="trailing" constant="20" id="Bus-nF-mJa"/>
+                            <constraint firstItem="uX4-oO-hmt" firstAttribute="leading" secondItem="raw-J0-wgc" secondAttribute="leading" id="VNZ-uD-ghT"/>
+                            <constraint firstItem="raw-J0-wgc" firstAttribute="bottom" secondItem="uX4-oO-hmt" secondAttribute="bottom" id="X9U-zv-PJL"/>
+                            <constraint firstItem="raw-J0-wgc" firstAttribute="bottom" secondItem="IKY-mm-Mnn" secondAttribute="bottom" constant="20" id="awT-Re-2Iz"/>
+                            <constraint firstItem="IKY-mm-Mnn" firstAttribute="centerX" secondItem="VDE-5B-bES" secondAttribute="centerX" id="cdm-H1-j2F"/>
+                            <constraint firstItem="raw-J0-wgc" firstAttribute="trailing" secondItem="uX4-oO-hmt" secondAttribute="trailing" id="ilq-7h-eJE"/>
+                            <constraint firstItem="raw-J0-wgc" firstAttribute="bottom" secondItem="BF6-83-fwg" secondAttribute="bottom" constant="20" id="zRl-cq-5WJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="raw-J0-wgc"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="uX4-oO-hmt" id="XdV-2d-QcV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camerabutton" width="127" height="126"/>
+    </resources>
+</document>
