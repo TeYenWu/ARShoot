@@ -44,16 +44,33 @@
                                     <action selector="preview:" destination="BV1-FR-VrT" eventType="touchUpInside" id="gwt-go-JQ1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJv-jE-V4Z">
+                                <rect key="frame" x="20" y="587" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="1S6-h8-kPb"/>
+                                    <constraint firstAttribute="height" constant="60" id="XA8-7x-hll"/>
+                                    <constraint firstAttribute="width" constant="60" id="eGK-4W-Fa6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="rjJ-8S-ji9"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearWayPoints:" destination="BV1-FR-VrT" eventType="touchUpInside" id="K4o-4N-vh8"/>
+                                    <action selector="preview:" destination="BV1-FR-VrT" eventType="touchUpInside" id="UGN-DS-3YQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uX4-oO-hmt" firstAttribute="top" secondItem="raw-J0-wgc" secondAttribute="top" id="5Zy-No-vHv"/>
                             <constraint firstItem="raw-J0-wgc" firstAttribute="trailing" secondItem="BF6-83-fwg" secondAttribute="trailing" constant="20" id="Bus-nF-mJa"/>
+                            <constraint firstItem="raw-J0-wgc" firstAttribute="bottom" secondItem="JJv-jE-V4Z" secondAttribute="bottom" constant="20" id="MfE-OA-A0d"/>
                             <constraint firstItem="uX4-oO-hmt" firstAttribute="leading" secondItem="raw-J0-wgc" secondAttribute="leading" id="VNZ-uD-ghT"/>
                             <constraint firstItem="raw-J0-wgc" firstAttribute="bottom" secondItem="uX4-oO-hmt" secondAttribute="bottom" id="X9U-zv-PJL"/>
                             <constraint firstItem="raw-J0-wgc" firstAttribute="bottom" secondItem="IKY-mm-Mnn" secondAttribute="bottom" constant="20" id="awT-Re-2Iz"/>
                             <constraint firstItem="IKY-mm-Mnn" firstAttribute="centerX" secondItem="VDE-5B-bES" secondAttribute="centerX" id="cdm-H1-j2F"/>
                             <constraint firstItem="raw-J0-wgc" firstAttribute="trailing" secondItem="uX4-oO-hmt" secondAttribute="trailing" id="ilq-7h-eJE"/>
+                            <constraint firstItem="JJv-jE-V4Z" firstAttribute="leading" secondItem="raw-J0-wgc" secondAttribute="leading" constant="20" id="tb6-ob-XPz"/>
                             <constraint firstItem="raw-J0-wgc" firstAttribute="bottom" secondItem="BF6-83-fwg" secondAttribute="bottom" constant="20" id="zRl-cq-5WJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="raw-J0-wgc"/>
